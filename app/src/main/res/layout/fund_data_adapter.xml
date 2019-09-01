@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+
+    android:elevation="5dp"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout"
+        android:orientation="vertical">
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="match_parent"
+            style="@style/RippleStyleGrey"
+            app:mrl_rippleDuration="450"
+            android:id="@+id/materialRippleLayout"
+            android:background="@color/white"
+            app:mrl_rippleFadeDuration="175"
+            app:mrl_rippleDelayClick="true"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:gravity="top"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/ivIcon"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bank Name"
+                            android:textStyle="bold"
+                            android:textSize="14dp"
+                            android:id="@+id/tvBankName"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/grey_txt" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fund Category"
+                            android:id="@+id/tvFundCategory"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/grey_txt"
+                            />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_txt"
+                        android:background="@drawable/next"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.5"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rating"/>
+                        <RatingBar
+                            android:id="@+id/simpleRatingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style = "?android:attr/ratingBarStyleSmall"
+                            android:numStars="5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 Year"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvNavReturn"
+                            android:textStyle="bold"
+                            android:hint="Return"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:layout_weight="1">
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cardView"
+                            android:background="@color/white"
+                            android:layout_centerHorizontal="true"
+                            android:elevation="10dp">
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:layout_width="match_parent"
+                                style="@style/RippleStyleWhite"
+                                app:mrl_rippleDuration="450"
+                                app:mrl_rippleFadeDuration="175"
+                                app:mrl_rippleDelayClick="true"
+                                android:layout_height="match_parent">
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:id="@+id/btnTransactionHistory"
+                                    android:background="@color/colorPrimary"
+                                    android:textStyle="bold"
+                                    android:textAllCaps="false"
+                                    android:drawableTint="@color/white"
+                                    android:textColor="@color/white"
+                                    android:text="Select"/>
+
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
